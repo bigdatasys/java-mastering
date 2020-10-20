@@ -3,6 +3,7 @@ package mastering;
 import java.io.*;
 
 public class MainApp {
+
     public static void main(String[] args) {
         try {
             stringCalculator();
