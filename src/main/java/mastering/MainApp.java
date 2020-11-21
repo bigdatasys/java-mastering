@@ -1,7 +1,5 @@
 package mastering;
 
-import javax.swing.*;
-import java.io.*;
 import java.util.Scanner;
 
 public class MainApp {
@@ -21,53 +19,45 @@ public class MainApp {
         System.out.println("Selected menu option: " + menuOption);
         menuOption--;
 
-        if(classIndex[menuOption].equals("String Calculator")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                StringCalculator stringCalc = new StringCalculator();
-                stringCalc.stringCalcutatorTask();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("String Calculator")) { new Thread(() -> { try {
+            StringCalculator stringCalc = new StringCalculator();
+            stringCalc.stringCalcutatorTask();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("Arrays Methods")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                ArraysMethods arraysMethods = new ArraysMethods();
-                arraysMethods.Tasks();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("Arrays Methods")) { new Thread(() -> { try {
+            ArraysMethods arraysMethods = new ArraysMethods();
+            arraysMethods.Tasks();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("Operators")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                Operators operators = new Operators();
-                operators.Tasks();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("Operators")) { new Thread(() -> { try {
+            Operators operators = new Operators();
+            operators.Tasks();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("Lambdas")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                Lambdas lambdas = new Lambdas();
-                lambdas.Tasks();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("Lambdas")) { new Thread(() -> { try {
+            Lambdas lambdas = new Lambdas();
+            lambdas.Tasks();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("Threads")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                Threads threads = new Threads();
-                threads.task();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("Threads")) { new Thread(() -> { try {
+            Threads threads = new Threads();
+            threads.task();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("ThreadsImpl")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                ThreadsImpl threadsimpl = new ThreadsImpl();
-                threadsimpl.task();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("ThreadsImpl")) { new Thread(() -> { try {
+            ThreadsImpl threadsimpl = new ThreadsImpl();
+            threadsimpl.task();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("HashMapImpl")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                HashMapImpl hashmapimpl = new HashMapImpl();
-                hashmapimpl.task();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("HashMapImpl")) { new Thread(() -> { try {
+            HashMapImpl hashmapimpl = new HashMapImpl();
+            hashmapimpl.task();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
-        if(classIndex[menuOption].equals("HashSetImpl")) { new Thread(new Runnable() {
-            @Override public void run() { try {
-                HashSetImpl hashsetimpl = new HashSetImpl();
-                hashsetimpl.task();
-            } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}}).start();}
+        if(classIndex[menuOption].equals("HashSetImpl")) { new Thread(() -> { try {
+            HashSetImpl hashsetimpl = new HashSetImpl();
+            hashsetimpl.task();
+        } catch (Exception ex) { System.out.print("Error: " + ex.toString()); }}).start();}
 
         if(classIndex[menuOption].equals("IteratorImpl")) { new Thread(new Runnable() {
             @Override public void run() { try {
